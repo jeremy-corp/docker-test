@@ -74,8 +74,9 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-    push2:
-    # Ensure test job passes before pushing image.
+          
+  push2:
+  # Ensure test job passes before pushing image.
     needs: test
 
     runs-on: ubuntu-latest
